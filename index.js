@@ -17,5 +17,6 @@ app.use( express.json({ extended: true }));
             console.log("Corriendo desde el server -->>>>4000");
 
         app.use('/alumnos',require('./src/routes/alumnos'))
+        app.use('/login',require('./src/routes/login'))
 
     })

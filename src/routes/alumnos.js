@@ -1,7 +1,7 @@
 
 const  express= require('express');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
+//const req = require('express/lib/request');
+//const res = require('express/lib/response');
 const router = express.Router();
 const pool = require('../config/database');
 
@@ -16,18 +16,18 @@ router.get('/', async (req,res)=>{
               res.json({resp:resp})
             }catch(e){
                   res.json({mens:"fallo "})
+
             }
          //res.json({resp: res})
 
 });
 
   router.post('/',async (req,res)=>{
-
           const newLog={
                 id_login,
                 usuario,
                 contraseña       
-          } = req.body;
+          } =    req.body;
             
           try{
 
