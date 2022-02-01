@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 
 
 
@@ -10,8 +10,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+
 app.use( express.json({ extended: true }));
 
+app.use(cors());
 
     app.listen( process.env.PORT || 4000,()=>{
             console.log("Corriendo desde el server -->>>>4000");
